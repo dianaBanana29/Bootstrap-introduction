@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="horse.jfif">
+    <title>Chess Board</title>
+</head>
+<body>
+ <div class=" board"></div>
+ <style>
+     .board{
+         height:640px;
+         width: 640px;
+         margin: 30px auto;
+         border: 1px solid black;
+     }
+     .block{
+         height: 80px;
+         width: 80px;
+         float: left;
+     }
+     .black{
+    background: black;
+}
+ 
+.white{
+    background: white;
+}
+ </style> 
+ <script>
+     function drawBoard(){
+    let board = document.querySelector('.board');
+    let block;
+    let flag = true;
+    for(let i=0; i<8; i++){
+        
+        for(let j=0; j<8; j++){
+            if(j==0)
+            flag = !flag;   
+            block = document.createElement('div');
+            if(flag)
+            block.className='block black';
+            else
+                block.className='block white';
+            board.appendChild(block);
+                        flag = !flag;
+        }
+    }
+}
+ 
+drawBoard();
+ </script>
+</body>
+</html>

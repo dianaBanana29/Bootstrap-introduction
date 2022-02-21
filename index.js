@@ -1,4 +1,4 @@
-const root = document.getElementById('root');
+//const root = document.getElementById('root');
 //root.innerHTML = `<ul> ${getItems()}</ul>`
 /*function range(from, length){
     const res = [];
@@ -26,3 +26,4 @@ function displayPage(page){
     }
     
     }
+   console.log( String.fromCharCode(65))
